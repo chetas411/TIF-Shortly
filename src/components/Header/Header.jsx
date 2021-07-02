@@ -6,7 +6,8 @@ import HamBurgerMenu from '../../assets/images/hambureger-menu.svg'
 const Navbar = styled.header`
     display: flex;
     width: 100%;
-    padding: 2.5rem 1.5rem;
+    padding: 2.5rem 1.25rem;
+    padding-bottom: 1rem;
     justify-content: space-between; 
 `;
 
