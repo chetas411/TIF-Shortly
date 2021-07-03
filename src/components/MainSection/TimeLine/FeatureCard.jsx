@@ -5,8 +5,9 @@ const Card = styled.div`
     position: relative;
     width: 100%;
     padding: 2rem 1.25rem;
-    background-color: #ffffff;
+    background-color: ${props => props.theme.colors.white};
     border-radius: 0.25rem;
+    margin: 0 auto;
     margin-bottom: 6rem;
     z-index: 2;
     & div {
@@ -19,21 +20,24 @@ const Card = styled.div`
         margin: 0 auto;
         margin-top: -4.5rem;
         border-radius: 50%;
-        background-color: #3b3054;
+        background-color: ${props => props.theme.colors.darkViolet};
     }
     & h2, & p {
         text-align: center;
     }
     & h2 {
         margin-top: 2rem;
-        color: #232127;
+        color: ${props => props.theme.colors.darkBlue};
         font-size: 1.25rem;
     }
 
     & p {
         margin-top: 1rem;
-        color: #9e9aa7;
+        color: ${props => props.theme.colors.blueGray};
         font-size: 0.85rem;
+    }
+    @media (min-width: 768px) {
+        width: 75%;
     }
 
 `;

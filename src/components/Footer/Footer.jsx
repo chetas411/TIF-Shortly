@@ -13,8 +13,8 @@ const Container = styled.footer`
     padding: 2.5rem;
     justify-content: center;
     align-items: center;
-    background-color: #232127;
-    color: #ffffff;
+    background-color: ${props => props.theme.colors.veryDarkViolet};
+    color: ${props => props.theme.colors.white};
     & .footer-cols {
         display: flex;
         flex-direction: column;
@@ -26,7 +26,7 @@ const Container = styled.footer`
         }
         & ul {
             text-align: center;
-            color: 	#bfbfbf;
+            color: 	${props => props.theme.colors.darkgray};
             & li {
                 display: block;
                 margin-bottom: 0.75rem;

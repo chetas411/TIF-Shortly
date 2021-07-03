@@ -1,19 +1,21 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import Header from './components/Header/Header';
 import Showcase from './components/Showcase/Showcase';
-import LinkSection from './components/LinkSection/LinkSection';
+import MainSection from './components/MainSection/MainSection';
 import EndSection from './components/EndSection/EndSection';
 import Footer from './components/Footer/Footer';
+import Theme from './components/Theme';
 
 const App = () => {
     return (
-        <div>
+        <ThemeProvider theme={Theme}>
             <Header />
             <Showcase />
-            <LinkSection />
+            <MainSection />
             <EndSection />
             <Footer />
-        </div>
+        </ThemeProvider>
     );
 };
 

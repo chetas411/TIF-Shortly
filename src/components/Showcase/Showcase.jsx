@@ -12,6 +12,9 @@ const MidContainer = styled.section`
 
 const ImgContainer = styled.img`
     width: 150%;
+    @media (min-width: 768px) {
+        width: 100%;
+    }
 `;
 
 const TextContainer = styled.div`
@@ -24,14 +27,14 @@ const TextContainer = styled.div`
         text-align: center;
         font-weight: 900;
         line-height: 2.75rem;
-        color: #232127;
+        color: ${props => props.theme.colors.darkBlue};
         margin-bottom: 1rem;
     }
 
     & p{
         font-size: 1rem;
         text-align: center;
-        color:  #9e9aa7;
+        color:  ${props => props.theme.colors.darkGray};
         margin-bottom: 1.25rem;
     }
 `;
@@ -44,7 +47,7 @@ const Showcase = () => {
             <TextContainer>
                 <h1>More than just shorter links</h1>
                 <p>Build your brand's recognition and get detailed insights on how your links are performing.</p>
-                <ButtonRounded btnWidth="12rem" btnColor="#ffffff" btnBgColor="#2acfcf">Get Started</ButtonRounded>
+                <ButtonRounded btnWidth="12rem" btnColor={props => props.theme.colors.white} btnBgColor={props => props.theme.colors.cyan}>Get Started</ButtonRounded>
             </TextContainer>
         </MidContainer>
     )

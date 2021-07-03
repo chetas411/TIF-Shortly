@@ -15,7 +15,7 @@ const Line = styled.div`
     transform: translate(-50%);
     width: 0.5rem;
     height: 100%;
-    background-color: #26cfcf; 
+    background-color: ${props => props.theme.colors.cyan};;
     z-index: 0;   
 `;
 

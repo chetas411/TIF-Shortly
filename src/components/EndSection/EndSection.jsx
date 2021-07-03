@@ -12,13 +12,13 @@ const Box = styled.section`
     align-items: center;
     background: url(${BgImg});
     background-repeat: no-repeat;
-    background-position: left top;
-    background-color: #3b3054;
+    background-position: right top;
+    background-color: ${props => props.theme.colors.darkViolet};
 
     & h1 {
         text-align: center;
         margin-bottom: 1rem;
-        color: #ffffff;
+        color: ${props => props.theme.colors.white};
     }
 `; 
 
@@ -26,7 +26,7 @@ const EndSection = () => {
     return (
         <Box>
             <h1>Boost your links today</h1>
-            <ButtonRounded btnWidth="10rem" btnColor="#ffffff" btnBgColor="#26cfcf">Get Started</ButtonRounded>
+            <ButtonRounded btnWidth="10rem" btnColor={props => props.theme.colors.white} btnBgColor={props => props.theme.colors.cyan}>Get Started</ButtonRounded>
         </Box>
     )
 }
