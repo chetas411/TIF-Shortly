@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
 const ButtonRounded = styled.button`
-    padding: 1rem;
+    padding: 0.75rem;
     width: ${props => props.btnWidth};
     color: ${props => props.btnColor};
     background-color: ${props => props.btnBgColor};
     border: none;
     border-radius: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
     &:hover {

@@ -6,6 +6,8 @@ import ShowCaseImg from '../../assets/images/illustration-working.svg';
 const MidContainer = styled.section`
     width: 100%;
     padding: 1rem 1.25rem;
+    margin-bottom: 5rem;
+    overflow: hidden;
 `;
 
 const ImgContainer = styled.img`
