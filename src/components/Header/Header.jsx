@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Logo from '../../assets/images/logo.svg';
-import HamBurgerMenu from '../../assets/images/hambureger-menu.svg'
+import HamBurgerMenu from '../../assets/images/hambureger-menu.svg';
+import NavigationMenu from './NavigationMenu';
 
 const Navbar = styled.header`
     display: flex;
@@ -12,11 +13,19 @@ const Navbar = styled.header`
 `;
 
 const Header = (props)=>{
+    const [showMenu,setShowMenu] = useState(false);
+    const menuToggle = (e) => {
+        e.preventDefault();
+        setShowMenu(!showMenu);
+    }
     return(
-        <Navbar>
-            <img src={Logo} alt="shortly" />
-            <a href="#"><img src={HamBurgerMenu} alt="menu"></img></a>
-        </Navbar>
+        <>
+            <Navbar>
+                <img src={Logo} alt="shortly" />
+                <a onClick={menuToggle} href="#"><img src={HamBurgerMenu} alt="menu"></img></a>
+            </Navbar>
+            <NavigationMenu show={showMenu} />
+        </>
     )
 }
 

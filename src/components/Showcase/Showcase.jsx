@@ -22,6 +22,7 @@ const TextContainer = styled.div`
     flex-direction: column;
     align-items: center;
     padding: 2rem 0;
+    margin-top: 2.25rem;
     & h1{
         font-size: 2.25rem;
         text-align: center;
