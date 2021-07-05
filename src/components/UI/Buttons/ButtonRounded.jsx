@@ -11,6 +11,7 @@ const ButtonRounded = styled.button`
     font-weight: 700;
     cursor: pointer;
     &:hover {
+        cursor: pointer;
         opacity: 0.7;
     }
 `;

@@ -15,6 +15,14 @@ const Container = styled.footer`
     align-items: center;
     background-color: ${props => props.theme.colors.veryDarkViolet};
     color: ${props => props.theme.colors.white};
+    & a {
+        text-decoration: none;
+        color: ${props => props.theme.colors.white};
+    }
+
+    & a:hover {
+        color: ${props => props.theme.colors.cyan};
+    }
     & .footer-cols {
         display: flex;
         flex-direction: column;
@@ -43,35 +51,61 @@ const Container = styled.footer`
         align-items: center;
         margin-top: 1rem;
     }
+
+    @media (min-width: 1024px) {
+        padding: 2.5rem 4.5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        & #f-logo{
+            min-width: 25rem;
+            text-align: center;
+        }
+        & .footer-cols {
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin: 0;
+            margin: 0 2.5rem;
+            & ul {
+                text-align: left;
+            }
+        }
+        & #social-handles {
+            max-width: 10rem;
+        }
+
+    }
 `;
 
 const Footer = () => {
     return (
         <Container>
-            <img src={Logo} alt="Shortly" />
+            <div id="f-logo">
+                <img src={Logo} alt="Shortly" />
+            </div>
             <div className="footer-cols">
                 <h3>Features</h3>
                 <ul>
-                    <li>Link Shortening</li>
-                    <li>Branded Links</li>
-                    <li>Analytics</li>
+                    <a href="#"><li>Link Shortening</li></a>
+                    <a href="#"><li>Branded Links</li></a>
+                    <a href="#"><li>Analytics</li></a>
                 </ul>
             </div>
             <div className="footer-cols">
                 <h3>Resources</h3>
                 <ul>
-                    <li>Blog</li>
-                    <li>Developers</li>
-                    <li>Support</li>
+                    <a href="#"><li>Blog</li></a>
+                    <a href="#"><li>Developers</li></a>
+                    <a href="#"><li>Support</li></a>
                 </ul>
             </div>
             <div className="footer-cols">
                 <h3>Company</h3>
                 <ul>
-                    <li>About</li>
-                    <li>Our Team</li>
-                    <li>Carrers</li>
-                    <li>Contact</li>
+                    <a href="#"><li>About</li></a>
+                    <a href="#"><li>Our Team</li></a>
+                    <a href="#"><li>Carrers</li></a>
+                    <a href="#"><li>Contact</li></a>
                 </ul>
             </div>
             <div id="social-handles">

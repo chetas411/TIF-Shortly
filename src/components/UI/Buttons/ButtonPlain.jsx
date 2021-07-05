@@ -9,9 +9,9 @@ const ButtonPlain = styled.button`
     border-radius: 0.25rem;
     font-size: 1rem;
     font-weight: 700;
-    cursor: pointer;
     &:hover {
         opacity: 0.7;
+        cursor: pointer;
     }
 `;
 

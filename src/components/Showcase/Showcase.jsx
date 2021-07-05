@@ -8,12 +8,30 @@ const MidContainer = styled.section`
     padding: 1rem 1.25rem;
     margin-bottom: 5rem;
     overflow: hidden;
+
+    @media (min-width: 1024px) {
+        display: flex;
+        padding: 1rem 5.25rem;
+        padding-right: 0;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center
+    }
+    @media (min-width: 1200px) {
+        padding: 1rem 10rem;
+    }
 `;
 
 const ImgContainer = styled.img`
     width: 150%;
     @media (min-width: 768px) {
         width: 100%;
+    }
+    @media (min-width: 1024px) {
+        max-width: 25rem;
+    }
+    @media (min-width: 1200px) {
+        max-width: 30rem;
     }
 `;
 
@@ -38,6 +56,23 @@ const TextContainer = styled.div`
         color:  ${props => props.theme.colors.darkGray};
         margin-bottom: 1.25rem;
     }
+    @media (min-width: 1024px) {
+        width: 60%;
+        align-items: flex-start;
+
+        & h1, & p {
+            text-align: left;
+        }
+
+        & h1 {
+            max-width: 20rem;
+        }
+
+        & p {
+            max-width: 25rem;
+        }
+    }
+
 `;
 
 

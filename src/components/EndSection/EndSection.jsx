@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import BgImg from '../../assets/images/bg-boost-mobile.svg';
+import BgImgMobile from '../../assets/images/bg-boost-mobile.svg';
+import BgImgDesktop from '../../assets/images/bg-boost-desktop.svg';
 import ButtonRounded from '../UI/Buttons/ButtonRounded';
 
 const Box = styled.section`
@@ -10,15 +11,23 @@ const Box = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url(${BgImg});
+    background: url(${BgImgMobile});
     background-repeat: no-repeat;
     background-position: right top;
     background-color: ${props => props.theme.colors.darkViolet};
-
     & h1 {
         text-align: center;
         margin-bottom: 1rem;
         color: ${props => props.theme.colors.white};
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: -15rem;
+        background: url(${BgImgDesktop});
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: ${props => props.theme.colors.darkViolet};
     }
 `; 
 

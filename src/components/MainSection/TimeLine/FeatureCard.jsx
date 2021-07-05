@@ -40,11 +40,24 @@ const Card = styled.div`
         width: 75%;
     }
 
+    @media (min-width: 1024px) {
+        width: 18rem;
+        transform: rotate(90deg) translate(0,${props => props.shift});
+        & div {
+            margin: 0;
+            margin-top: -4.5rem;
+        }
+        & h2, & p {
+            text-align: left;
+        }
+    }
+
+
 `;
 
 const FeatureCard = (props) => {
     return (
-        <Card>
+        <Card shift = {props.shift}>
             <div>
                 <img src={props.featIcon} alt="brand-icon" />
             </div>

@@ -8,6 +8,12 @@ import IconCustomize from '../../../assets/images/icon-fully-customizable.svg';
 const Container = styled.div`
     position: relative;
     width: 100%;
+    @media (min-width: 1024px) {
+        transform: rotate(-90deg);
+        margin: 0 auto;
+        margin-top: -15rem;
+        width: 50%;
+    }
 `;
 const Line = styled.div`
     position: absolute;
@@ -15,7 +21,7 @@ const Line = styled.div`
     transform: translate(-50%);
     width: 0.5rem;
     height: 100%;
-    background-color: ${props => props.theme.colors.cyan};;
+    background-color: ${props => props.theme.colors.cyan};
     z-index: 0;   
 `;
 
@@ -31,9 +37,9 @@ const TimeLine = () => {
     return (
         <Container>
             <Line />
-            <FeatureCard heading={HeadingBrand} subtext={SubTextBrand} featIcon={IconBrand} />
-            <FeatureCard heading={HeadingDetail} subtext={SubTextDetail} featIcon={IconDetail} />
-            <FeatureCard heading={HeadingCustomize} subtext={SubTextCustomize} featIcon={IconCustomize} />
+            <FeatureCard shift={"-1.5rem"} heading={HeadingBrand} subtext={SubTextBrand} featIcon={IconBrand} />
+            <FeatureCard shift={"0rem"} heading={HeadingDetail} subtext={SubTextDetail} featIcon={IconDetail} />
+            <FeatureCard shift={"1.5rem"} heading={HeadingCustomize} subtext={SubTextCustomize} featIcon={IconCustomize} />
         </Container>
     )
 }
